@@ -153,5 +153,3 @@ The -k flag allows skipping SSL verification (since Burp uses a self-signed cert
 Proxy → HTTP history
 
 🎉 Done! You now have a working Burp Suite setup in Docker with proxying support for host applications and custom Python extensions.
-
-Let me know if you’d like this exported as a README.md or formatted into a PDF guide.
