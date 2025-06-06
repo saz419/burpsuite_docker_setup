@@ -1,0 +1,14 @@
+services:
+  burpsuite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: burpsuite
+    ports:
+      - "${BURP_PROXY_PORT}:8080"  # Burpsuite Proxy
+      - "${BURP_VNC_PORT}:5900"  # VNC access
+    volumes:
+      - ./extensions:/opt/burp_extensions/
+    environment:
+      - DISPLAY=:99
+    restart: unless-stopped
